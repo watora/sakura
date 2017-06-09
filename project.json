@@ -1,0 +1,33 @@
+{
+    "file": "index.html",
+    "type": "web",
+    "title": "百合大法好/1080p/花瓣飘落效果",
+    "general": {
+        "properties" : {
+            "backgroundImageFolder": {
+                "order": 1,
+                "text": "图片目录",
+                "type": "directory",
+                "mode": "ondemand"
+            },
+            "interval": {
+                "order": 2,
+                "text": "背景切换间隔，单位分",
+                "type": "textinput",
+                "value": 30
+            },
+            "width": {
+                "order": 3,
+                "text": "宽度，单位px",
+                "type": "textinput",
+                "value": 1920
+            },
+            "height": {
+                "order": 4,
+                "text": "高度，单位px",
+                "type": "textinput",
+                "value": 1080
+            }
+        }
+    }
+}

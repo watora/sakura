@@ -1,8 +1,9 @@
+var width = 1920, height = 1080;
+var nodeList = [];
 (function(){
     //素材来自yuyuyu.tv/washio
     //c 使用的素材数, ready 已加载的素材数, sakuraCount 屏幕上显示的数量
     var c = 5, ready = 0, sakuraCount = 100, speed = 0.25;
-    var width = 1920, height = 1080;
     var canvas = document.querySelector('#sakura');
     canvas.width = width;
     canvas.height = height;
@@ -31,7 +32,6 @@
         this.scale = 0;     //缩放
         this.count = 0;     //计数
     };
-    var nodeList = [];
     var init = function(node){
         if(!node)
             node = new sakura();
@@ -95,9 +95,13 @@
     };
 
     var start = function(){
-        setInterval(function(){
-            calc();
-            draw();
-        }, 16);
+        var req = function(){
+            requestAnimationFrame(function(){
+                calc();
+                draw();
+                req();
+            });
+        }
+        req();
     }
 })();

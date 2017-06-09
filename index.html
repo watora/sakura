@@ -2,16 +2,26 @@
     <head>
         <style>
             body{
-                width: 1920px;
-                height: 1080px;
                 background-image: url('./bk.png');
                 background-repeat: no-repeat;
                 margin: 0;
+                transition: background-image 1s ease-in-out;
+            }
+            #message{
+                background-color: rgba(0,0,0,.5);
+                font-size: 20px;
+                color: white;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 30%;
             }
         </style>
     </head>
     <body>
+        <div id='message'></div>
         <canvas id='sakura'></canvas>
     </body>
+    <script src="./paperEngine.js" type="text/javascript"></script>
     <script src="./sakura.js" type="text/javascript"></script>
 </html>
